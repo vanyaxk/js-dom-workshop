@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //removeall Button
     var removeAll = document.querySelector("#removeFinishedTasksButton");
 
-
+    var tasks = [];
 
     //Event Listeners
         add.addEventListener("click", function() {
@@ -27,22 +27,38 @@ document.addEventListener("DOMContentLoaded", function() {
             var complete = document.createElement('button');
             complete.innerText = "Complete";
                 var task = document.createElement('li');
-                var header = document.createElement('h1');
+                var header = document.createElement('h2');
                 header.innerText = input.value;
         
+                
                 task.appendChild(header);
                 task.appendChild(remove);
                 task.appendChild(complete);
 
+
+                
+
+                // var savedTask = localStorage.getitem('task');
                 var length = input.value.length;
 
                 //check input
+
+                
+                
+
                 if (length < 5 || length > 100) {
                     alert("Too few symbols!");
                 } else {
                     list.append(task);
                     count++;
-                }               
+
+                    tasks.push(task.innerText);
+                    console.log(tasks);
+                }            
+                
+                //localStorage
+                localStorage.setItem('tasks', tasks);
+                
                 
                 input.value = '';
                 console.log(count);
@@ -50,7 +66,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (count > 0) {
                     list.parentNode.insertBefore(counter, list);
                     counter.innerText = "Tasks to complete: " + count;
-
                 }
 
                 //Event Listeners
