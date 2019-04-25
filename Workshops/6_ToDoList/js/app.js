@@ -18,8 +18,6 @@ document.addEventListener("DOMContentLoaded", function() {
     //removeall Button
     var removeAll = document.querySelector("#removeFinishedTasksButton");
 
-    var tasks = [];
-
     //Event Listeners
         add.addEventListener("click", function() {
             var remove = document.createElement('button');
@@ -51,17 +49,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 } else {
                     list.append(task);
                     count++;
-
-                    tasks.push(task.innerText);
-                    console.log(tasks);
-                }            
-                
-                //localStorage
-                localStorage.setItem('tasks', tasks);
+                }
                 
                 
                 input.value = '';
-                console.log(count);
                 //add span
                 if (count > 0) {
                     list.parentNode.insertBefore(counter, list);
