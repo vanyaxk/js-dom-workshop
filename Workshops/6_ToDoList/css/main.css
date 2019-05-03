@@ -1,25 +1,20 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
+
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Roboto', sans-serif;
   width: 100%;
   height: 100vh;
   font-size: 18px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #ffc600; }
+  align-items: center;
+  background: #ffc600;
+}
 
 .toDoList {
   padding: 15px;
@@ -27,68 +22,66 @@ body {
   min-height: 100px;
   background: #fff;
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.4);
-          box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.4);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.4);
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
-  .toDoList .inputs {
-    width: 100%; }
-    .toDoList .inputs #taskInput {
-      display: block;
-      width: 95%;
-      min-height: 50px;
-      margin: 0 auto;
-      padding: 5px;
-      font-size: 1.2em; }
-    .toDoList .inputs .input-buttons {
-      width: 95%;
-      margin: 10px auto;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between; }
-      .toDoList .inputs .input-buttons button {
-        -webkit-appearance: none;
-           -moz-appearance: none;
-                appearance: none;
-        border: none;
-        padding: 10px;
-        -webkit-box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.4);
-                box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.4);
-        cursor: pointer;
-        font-size: 1em; }
-        .toDoList .inputs .input-buttons button#removeFinishedTasksButton {
-          background: rgba(214, 69, 65, 0.8); }
-        .toDoList .inputs .input-buttons button#addTaskButton {
-          background: #c5eff7; }
-  .toDoList #taskList {
-    list-style: none;
-    width: 100%;
-    margin: 0 auto; }
-    .toDoList #taskList li {
-      padding: 5px;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; }
-      .toDoList #taskList li h2 {
-        -webkit-box-flex: 2;
-            -ms-flex-positive: 2;
-                flex-grow: 2;
-        text-transform: capitalize;
-        font-weight: 400; }
-      .toDoList #taskList li button {
-        -webkit-box-flex: 1;
-            -ms-flex-positive: 1;
-                flex-grow: 1; }
+  flex-flow: column wrap;
+  align-items: center;
+}
 
-/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW4uY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDZEQUE2RDtBQUM3RDtFQUNFLFNBQVM7RUFDVCxVQUFVO0VBQ1YsOEJBQXNCO1VBQXRCLHNCQUFzQixFQUFFOztBQUUxQjtFQUNFLGlDQUFpQztFQUNqQyxXQUFXO0VBQ1gsYUFBYTtFQUNiLGVBQWU7RUFDZixvQkFBYTtFQUFiLG9CQUFhO0VBQWIsYUFBYTtFQUNiLHdCQUF1QjtNQUF2QixxQkFBdUI7VUFBdkIsdUJBQXVCO0VBQ3ZCLHlCQUFtQjtNQUFuQixzQkFBbUI7VUFBbkIsbUJBQW1CO0VBQ25CLG1CQUFtQixFQUFFOztBQUV2QjtFQUNFLGFBQWE7RUFDYixnQkFBZ0I7RUFDaEIsaUJBQWlCO0VBQ2pCLGdCQUFnQjtFQUNoQixrQkFBa0I7RUFDbEIsdURBQStDO1VBQS9DLCtDQUErQztFQUMvQyxvQkFBYTtFQUFiLG9CQUFhO0VBQWIsYUFBYTtFQUNiLDRCQUFzQjtFQUF0Qiw2QkFBc0I7TUFBdEIsMEJBQXNCO1VBQXRCLHNCQUFzQjtFQUN0Qix5QkFBbUI7TUFBbkIsc0JBQW1CO1VBQW5CLG1CQUFtQixFQUFFO0VBQ3JCO0lBQ0UsV0FBVyxFQUFFO0lBQ2I7TUFDRSxjQUFjO01BQ2QsVUFBVTtNQUNWLGdCQUFnQjtNQUNoQixjQUFjO01BQ2QsWUFBWTtNQUNaLGdCQUFnQixFQUFFO0lBQ3BCO01BQ0UsVUFBVTtNQUNWLGlCQUFpQjtNQUNqQixvQkFBYTtNQUFiLG9CQUFhO01BQWIsYUFBYTtNQUNiLHlCQUE4QjtVQUE5QixzQkFBOEI7Y0FBOUIsOEJBQThCLEVBQUU7TUFDaEM7UUFDRSx3QkFBZ0I7V0FBaEIscUJBQWdCO2dCQUFoQixnQkFBZ0I7UUFDaEIsWUFBWTtRQUNaLGFBQWE7UUFDYiw0REFBb0Q7Z0JBQXBELG9EQUFvRDtRQUNwRCxlQUFlO1FBQ2YsY0FBYyxFQUFFO1FBQ2hCO1VBQ0Usa0NBQWtDLEVBQUU7UUFDdEM7VUFDRSxtQkFBbUIsRUFBRTtFQUM3QjtJQUNFLGdCQUFnQjtJQUNoQixXQUFXO0lBQ1gsY0FBYyxFQUFFO0lBQ2hCO01BQ0UsWUFBWTtNQUNaLG9CQUFhO01BQWIsb0JBQWE7TUFBYixhQUFhLEVBQUU7TUFDZjtRQUNFLG1CQUFZO1lBQVosb0JBQVk7Z0JBQVosWUFBWTtRQUNaLDBCQUEwQjtRQUMxQixnQkFBZ0IsRUFBRTtNQUNwQjtRQUNFLG1CQUFZO1lBQVosb0JBQVk7Z0JBQVosWUFBWSxFQUFFIiwiZmlsZSI6Im1haW4uY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCB1cmwoXCJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2Nzcz9mYW1pbHk9Um9ib3RvXCIpO1xuKiB7XG4gIG1hcmdpbjogMDtcbiAgcGFkZGluZzogMDtcbiAgYm94LXNpemluZzogYm9yZGVyLWJveDsgfVxuXG5ib2R5IHtcbiAgZm9udC1mYW1pbHk6ICdSb2JvdG8nLCBzYW5zLXNlcmlmO1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgZm9udC1zaXplOiAxOHB4O1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgYmFja2dyb3VuZDogI2ZmYzYwMDsgfVxuXG4udG9Eb0xpc3Qge1xuICBwYWRkaW5nOiAxNXB4O1xuICBtaW4td2lkdGg6IDQwMHB4O1xuICBtaW4taGVpZ2h0OiAxMDBweDtcbiAgYmFja2dyb3VuZDogI2ZmZjtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBib3gtc2hhZG93OiAwIDAgMCAxMHB4IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC40KTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1mbG93OiBjb2x1bW4gd3JhcDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjsgfVxuICAudG9Eb0xpc3QgLmlucHV0cyB7XG4gICAgd2lkdGg6IDEwMCU7IH1cbiAgICAudG9Eb0xpc3QgLmlucHV0cyAjdGFza0lucHV0IHtcbiAgICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgICAgd2lkdGg6IDk1JTtcbiAgICAgIG1pbi1oZWlnaHQ6IDUwcHg7XG4gICAgICBtYXJnaW46IDAgYXV0bztcbiAgICAgIHBhZGRpbmc6IDVweDtcbiAgICAgIGZvbnQtc2l6ZTogMS4yZW07IH1cbiAgICAudG9Eb0xpc3QgLmlucHV0cyAuaW5wdXQtYnV0dG9ucyB7XG4gICAgICB3aWR0aDogOTUlO1xuICAgICAgbWFyZ2luOiAxMHB4IGF1dG87XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuOyB9XG4gICAgICAudG9Eb0xpc3QgLmlucHV0cyAuaW5wdXQtYnV0dG9ucyBidXR0b24ge1xuICAgICAgICBhcHBlYXJhbmNlOiBub25lO1xuICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgICAgIHBhZGRpbmc6IDEwcHg7XG4gICAgICAgIGJveC1zaGFkb3c6IGluc2V0IDAgMCAwIDNweCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuNCk7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgZm9udC1zaXplOiAxZW07IH1cbiAgICAgICAgLnRvRG9MaXN0IC5pbnB1dHMgLmlucHV0LWJ1dHRvbnMgYnV0dG9uI3JlbW92ZUZpbmlzaGVkVGFza3NCdXR0b24ge1xuICAgICAgICAgIGJhY2tncm91bmQ6IHJnYmEoMjE0LCA2OSwgNjUsIDAuOCk7IH1cbiAgICAgICAgLnRvRG9MaXN0IC5pbnB1dHMgLmlucHV0LWJ1dHRvbnMgYnV0dG9uI2FkZFRhc2tCdXR0b24ge1xuICAgICAgICAgIGJhY2tncm91bmQ6ICNjNWVmZjc7IH1cbiAgLnRvRG9MaXN0ICN0YXNrTGlzdCB7XG4gICAgbGlzdC1zdHlsZTogbm9uZTtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBtYXJnaW46IDAgYXV0bzsgfVxuICAgIC50b0RvTGlzdCAjdGFza0xpc3QgbGkge1xuICAgICAgcGFkZGluZzogNXB4O1xuICAgICAgZGlzcGxheTogZmxleDsgfVxuICAgICAgLnRvRG9MaXN0ICN0YXNrTGlzdCBsaSBoMiB7XG4gICAgICAgIGZsZXgtZ3JvdzogMjtcbiAgICAgICAgdGV4dC10cmFuc2Zvcm06IGNhcGl0YWxpemU7XG4gICAgICAgIGZvbnQtd2VpZ2h0OiA0MDA7IH1cbiAgICAgIC50b0RvTGlzdCAjdGFza0xpc3QgbGkgYnV0dG9uIHtcbiAgICAgICAgZmxleC1ncm93OiAxOyB9XG4iXX0= */
+.toDoList .inputs {
+  width: 100%;
+}
+
+.toDoList .inputs #taskInput {
+  display: block;
+  width: 95%;
+  min-height: 50px;
+  margin: 0 auto;
+  padding: 5px;
+  font-size: 1.2em;
+}
+
+.toDoList .inputs .input-buttons {
+  width: 95%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.toDoList .inputs .input-buttons button {
+  appearance: none;
+  border: none;
+  padding: 10px;
+  box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.toDoList .inputs .input-buttons button#removeFinishedTasksButton {
+  background: rgba(214, 69, 65, 0.8);
+}
+
+.toDoList .inputs .input-buttons button#addTaskButton {
+  background: #c5eff7;
+}
+
+.toDoList #taskList {
+  list-style: none;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.toDoList #taskList li {
+  padding: 5px;
+  display: flex;
+}
+
+.toDoList #taskList li h2 {
+  flex-grow: 2;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+.toDoList #taskList li button {
+  flex-grow: 1;
+}
