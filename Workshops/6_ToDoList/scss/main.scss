@@ -19,7 +19,7 @@ body {
 
 .toDoList {
     padding: 15px;
-    min-width: 350px;
+    min-width: 400px;
     min-height: 100px;
     background: #fff;
     border-radius: 5px;
@@ -33,8 +33,10 @@ body {
         #taskInput {
             display: block;
             width: 95%;
+            min-height: 50px;
             margin: 0 auto;
             padding: 5px;
+            font-size: 1.2em;
         }
 
         .input-buttons {
@@ -48,6 +50,7 @@ body {
                 padding: 10px;
                 box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.4);
                 cursor: pointer;
+                font-size: 1em;
 
                 &#removeFinishedTasksButton {
                     background: rgba(214, 69, 65, 0.8);
